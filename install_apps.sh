@@ -44,8 +44,8 @@ fi
 if [ ! -x "$(command -v nvm)" ]; then
   echo "Installing Node Version Manager."
   brew install nvm
-  nvm install node
-  nvm alias default node
+  nvm install --lts
+  nvm alias default 'lts/*'
 else
   echo 'Node Version Manager is installed and presumed configured.'
 fi
